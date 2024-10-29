@@ -224,3 +224,20 @@ h2 {
     text-align: center;
     width: 100%;
 }
+
+.university-logo {
+    width: 200px;  /* Adjust this value to match your desired size */
+    height: auto;
+    margin-bottom: 20px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.university-logo:hover {
+    transform: scale(1.05);  /* Slight zoom effect on hover */
+}
+
+.card {
+    text-align: center;  /* Centers the content including the logo */
+    padding: 30px;  /* Increased padding to give more space around content */
+}
