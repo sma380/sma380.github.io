@@ -146,3 +146,15 @@ h2 {
         font-size: 1.5rem;
     }
 }
+
+.education-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.education-container .card {
+    flex: 1;
+    max-width: calc(50% - 10px);
+}
