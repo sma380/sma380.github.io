@@ -163,3 +163,11 @@ h2 {
     flex: 1;
     max-width: calc(50% - 25px);  /* Adjusted to account for new gap */
 }
+
+.social-links {
+    margin-top: 40px;  /* Increased from default */
+}
+
+.social-links a:hover {
+    background-color: #3498db;
+}
