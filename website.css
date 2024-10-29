@@ -264,3 +264,10 @@ h2 {
     text-align: center;  /* Centers the content including the logo */
     padding: 30px;  /* Increased padding to give more space around content */
 }
+
+/* Add this to your existing nav styles */
+nav a.active {
+    color: #3498db;  /* Same color as your hover state */
+    border-bottom: 2px solid #3498db;  /* Adds an underline effect */
+    padding-bottom: 3px;  /* Gives some space for the underline */
+}
