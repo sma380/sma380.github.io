@@ -150,11 +150,16 @@ h2 {
 .education-container {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 50px;  /* Increased from 20px to 50px */
     width: 100%;
+}
+
+#education h2 {
+    text-align: center;
+    margin-bottom: 40px;  /* Added to give some space between heading and boxes */
 }
 
 .education-container .card {
     flex: 1;
-    max-width: calc(50% - 10px);
+    max-width: calc(50% - 25px);  /* Adjusted to account for new gap */
 }
