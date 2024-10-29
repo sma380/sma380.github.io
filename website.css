@@ -187,25 +187,35 @@ h2 {
     text-align: center;
     margin-bottom: 40px;  /* Adds some space between title and links */
 }
-
 .profile-image {
-    width: 300px;  /* Reduced from default size */
-    height: 300px;  /* Makes it a perfect square */
-    border-radius: 50%;  /* Makes it circular */
-    object-fit: cover;  /* Maintains aspect ratio */
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
     margin: 20px 0;
-    border: 3px solid #2c3e50;  /* Optional: adds a border */
-    display: block;  /* Ensures proper spacing */
+    border: 3px solid #2c3e50;
+    display: block;
+    position: relative;
+}
+
+/* Alt text styling */
+.profile-image:not([src]), 
+.profile-image[src=""], 
+.profile-image[src="broken-link.jpg"] {  /* Add this line */
+    background-color: #f0f0f0;
+    position: relative;
 }
 
 .profile-image:not([src])::after, 
-.profile-image[src=""]::after, 
-.profile-image[src="#"]::after {
+.profile-image[src=""]::after,
+.profile-image[src="broken-link.jpg"]::after {  /* Add this line */
     content: attr(alt);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 14px;
-    color: #670;
+    font-size: 24px;  /* Increased size */
+    color: #2c3e50;
+    text-align: center;
+    width: 100%;
 }
