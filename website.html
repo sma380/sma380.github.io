@@ -96,14 +96,21 @@
     // Add scroll event listener
     window.addEventListener('scroll', () => {
         let current = '';
+        const scrollPosition = window.pageYOffset + window.innerHeight/2;
         
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            if (pageYOffset >= (sectionTop - sectionHeight/3)) {
+            
+            if (scrollPosition >= sectionTop) {
                 current = section.getAttribute('id');
             }
         });
+    
+        // If we're at the bottom of the page, highlight contact
+        if ((window.innerHeight + window.pageYOffset) >= document.documentElement.scrollHeight - 100) {
+            current = 'contact';
+        }
     
         navLinks.forEach(link => {
             link.classList.remove('active');
@@ -112,6 +119,6 @@
             }
         });
     });
-    </script>
+</script>
 </body>
 </html>
